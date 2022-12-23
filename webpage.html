@@ -22,7 +22,7 @@
                 <td>JK Rowling</td>
                 <td>12</td>
                 <td><button id="button-showUpdate" onclick = "showUpdate(this)">update</button></td>
-                <td><button>delete</button></td>
+                <td><button id="button-doDelete" onclick = "doDelete(this)">delete</button></td>
             </tr>
         </table>
         <br/>
@@ -156,7 +156,10 @@
             showViewall()
             
         }
-
+        function doDelete(buttonElement){
+            var tableElement=document.getElementById('bookTable')
+            var index=buttonElement.parentNode.parentNode.rowIndex;
+            tableElement.deleteRow(index);}
 
     </script>
 </html>        
